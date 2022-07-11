@@ -3,7 +3,6 @@
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .dropbtn {
@@ -140,6 +139,7 @@ img {
 .cont {
   z-index: 2;
   position: absolute;
+  top: 100px
 }
 
 .body {
