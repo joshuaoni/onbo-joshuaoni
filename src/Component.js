@@ -23,22 +23,25 @@ const countries = [
 ]
 
 const Component = () => {
-    const [selection, setSelection] = useState('+91');
-    const [img, setImg] =  useState(ind);
+    const [selection, setSelection] = useState('+91');  // country code state. default is india.
+    const [img, setImg] =  useState(ind);   // country flag state. default is india.
 
-    const toggleDropDown = ()  => {
+    // close the drop down when user clicks outside the drop down
+    const removeDropDown = ()  => {
         document.querySelector('.drop-cont').classList.add('hide');
         var conts = document.querySelector('.conts');
         conts.classList.remove('ba3');
         conts.classList.add('bg3');
     }
 
+    // set the country code state and flag state to what the user selects in the drop down
     const setDetails = (code, flag) => {
         setSelection(code);
         setImg(flag);
         document.querySelector('.drop-cont').classList.add('hide');
     }
 
+    // open the drop down
     const myFunction = () => {
         document.querySelector('.drop-cont').classList.toggle('hide');
         var conts = document.querySelector('.conts');
@@ -77,6 +80,7 @@ const Component = () => {
                                 e.target.value = e.target.value.slice(0,10);
                             }}
                             onFocus={()=>{
+                                // active state on focus
                                 var conts = document.querySelector('.conts');
                                 conts.classList.remove('bg3');
                                 conts.classList.add('ba3');
@@ -98,7 +102,7 @@ const Component = () => {
                             })}
                         </div>
                     </div>
-                    <div className='cont3' onClick={toggleDropDown}></div>
+                    <div className='cont3' onClick={removeDropDown}></div>
                 </div>
             </div>
         </div>
