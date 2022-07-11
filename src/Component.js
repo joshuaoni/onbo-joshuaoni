@@ -26,6 +26,13 @@ const Component = () => {
     const [selection, setSelection] = useState('+91');
     const [img, setImg] =  useState(ind);
 
+    const toggleDropDown = ()  => {
+        document.querySelector('.drop-cont').classList.add('hide');
+        var conts = document.querySelector('.conts');
+        conts.classList.remove('ba3');
+        conts.classList.add('bg3');
+    }
+
     const setDetails = (code, flag) => {
         setSelection(code);
         setImg(flag);
@@ -69,18 +76,21 @@ const Component = () => {
                         />
                     </div>
                 </div>
-                <div className='drop-cont hide'>
-                    <div className="dropdown-content">
-                        {countries.map(country => {
-                            return (
-                                <div className='options' onClick={()=>{
-                                    setDetails(country.code, country.flag);
-                                }} key={country.code}>
-                                    <img className='img' alt='' src={country.flag}/> <span>{country.code}</span>
-                                </div>
-                            )
-                        })}
+                <div className='cont2'>
+                    <div className='drop-cont hide'>
+                        <div className="dropdown-content">
+                            {countries.map(country => {
+                                return (
+                                    <div className='options' onClick={()=>{
+                                        setDetails(country.code, country.flag);
+                                    }} key={country.code}>
+                                        <img className='img' alt='' src={country.flag}/> <span>{country.code}</span>
+                                    </div>
+                                )
+                            })}
+                        </div>
                     </div>
+                    <div className='cont3' onClick={toggleDropDown}></div>
                 </div>
             </div>
         </div>

@@ -161,3 +161,12 @@ img {
 .img {
   border-radius: 5px;
 }
+
+.cont2 {
+  display: flex;
+}
+
+.cont3 {
+  width: 226px;
+  height: 180px;
+}
