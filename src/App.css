@@ -51,6 +51,7 @@ span {
   padding-top: 10px;
   padding-bottom: 5px;
   margin-top: 3px;
+  z-index: 4;
 }
 
 .dropdown-content {
@@ -127,6 +128,14 @@ span {
   margin: 0;
 }
 
+.cont3 {
+  position: absolute;
+  width: 336px;
+  height: 180px;
+  background-color: #00000000;
+  z-index: 3;
+}
+
 input[type=number] {
   -moz-appearance: textfield;
 }
@@ -164,9 +173,4 @@ img {
 
 .cont2 {
   display: flex;
-}
-
-.cont3 {
-  width: 226px;
-  height: 180px;
 }
