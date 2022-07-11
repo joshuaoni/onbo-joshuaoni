@@ -72,6 +72,7 @@ const Component = () => {
                         <input 
                             className='ten number' 
                             type='number' 
+                            placeholder='XXXXXXXXXX'
                             onInput={(e)=>{
                                 e.target.value = e.target.value.slice(0,10);
                             }}
