@@ -50,7 +50,14 @@ const Component = () => {
         <div className='cont'>
             <div className="dropdown">
                 <div className='conts bg3'>
-                    <div className='label'>
+                    <div 
+                        className='label'
+                        onClick={()=>{
+                            var conts = document.querySelector('.conts');
+                            conts.classList.remove('bg3');
+                            conts.classList.add('ba3');
+                        }}
+                    >
                         <p>Phone Number</p>
                     </div>
                     <div className='flex'>
