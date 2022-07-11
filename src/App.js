@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import Component from './Component';
 
 function App() {
+  const toggleDropDown = ()  => {
+    document.querySelector('.drop-cont').classList.add('hide');
+    var conts = document.querySelector('.conts');
+    conts.classList.remove('ba3');
+    conts.classList.add('bg3');
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Component/>
+      <div className='body' onClick={toggleDropDown}></div>
     </div>
   );
 }
